@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+	<string id="st_wpn_m24_new">
+		<text>M24 SWS</text>
+	</string>
+	<string id="st_wpn_m24_new_short">
+		<text>M24 SWS</text>
+	</string>
+	<string id="st_wpn_m24_new_descr">
+		<text>A sniper rifle of the US Army, the M24 Sniper Weapon System (SWS) is based on the Remington 700. Fitted with a Leupold 10x40mm scope, the M24 has a stainless steel barrel and an adjustable composite stock made from Kevlar and graphite.\n \n
+		%c[ui_gray_2]ATTACHMENTS: \n
+		%c[d_purple] • %c[ui_gray_2] 5.56x45 compatible suppressor\n
+		%c[d_purple] • %c[ui_gray_2] Leupold Mark 4 scope (integrated)\n \n</text>
+	</string>
+</string_table>

@@ -1,0 +1,253 @@
+[wpn_m24_mmg_snd_shoot]
+		snd_1_layer					= weapons\librarian_m24\core
+		snd_2_layer					= weapons\librarian_m24\bolt
+		
+[wpn_m24_mmg_silncer_snd_shoot]
+snd_1_layer			                                          	  = weapons\_sd\stereo\big\sd_close_1
+snd_1_layer1			                                          = weapons\_sd\stereo\big\sd_close_2
+snd_1_layer2			                                       	  = weapons\_sd\stereo\big\sd_close_3
+snd_1_layer3			                                       	  = weapons\_sd\stereo\big\sd_close_4
+snd_2_layer			                                          	  = weapons\_sd\stereo\big\tail_sd_1, 0.5
+snd_2_layer1		                                              = weapons\_sd\stereo\big\tail_sd_2, 0.5
+snd_2_layer2			                                       	  = weapons\_sd\stereo\big\tail_sd_3, 0.5
+snd_2_layer3			                                       	  = weapons\_sd\stereo\big\tail_sd_4, 0.5
+snd_3_layer			                                          	  = weapons\_shared\stereo\echo_9, 0.25
+snd_3_layer1			                                          = weapons\_shared\stereo\echo_2, 0.25
+snd_3_layer2			                                       	  = weapons\_shared\stereo\echo_3, 0.25
+snd_3_layer3			                                       	  = weapons\_shared\stereo\echo_4, 0.25
+snd_4_layer			                                       	 	  = weapons\_bass\bass_mid_sd
+snd_5_layer					= weapons\librarian_m24\bolt
+		
+[wpn_m24_kntl_sounds]:base_sounds
+		snd_draw						= weapons\generic\eastern_draw
+		snd_holster						= weapons\sniper_holster
+		snd_shoot						= wpn_m24_mmg_snd_shoot
+		snd_silncer_shot				= wpn_m24_mmg_silncer_snd_shoot
+		snd_reload						= weapons\librarian_m24\reload
+		snd_reload_empty				= weapons\librarian_m24\reload_empty
+		snd_reload_misfire				= weapons\librarian_m24\unjam
+
+
+;------------------------------------------------------------------------------------------------
+[wpn_m24]:identity_immunities,weapon_probability,default_weapon_params,wpn_m24_kntl_sounds
+        GroupControlSection         = spawn_group
+        $npc                        = on
+        $prefetch                   = 8
+        $spawn                      = "weapons\wpn_m24"
+        scheduled                   = off
+        cform                       = skeleton
+        
+        class                       = WP_SVD
+        slot                        = 2
+        animation_slot              = 2
+        ef_main_weapon_type         = 3
+        ef_weapon_type              = 8
+        hand_dependence             = 1
+        single_handed               = 0
+        
+        default_to_ruck             = false
+        sprint_allowed              = true
+		
+        icons_texture      						 = ui\ui_icon_m24
+		
+        inv_grid_height             = 2
+        inv_grid_width              = 6
+        inv_grid_x                  = 0
+        inv_grid_y                  = 0
+        inv_name                    = st_wpn_m24_new
+        inv_name_short              = st_wpn_m24_new
+        description                 = st_wpn_m24_new_descr
+        
+        kind                        = w_sniper
+        inv_weight                  = 5.4
+        cost                        = 76680
+        repair_type                 = rifle_7
+        weapon_class                = sniper_rifle
+        
+        hud                         = wpn_m24_hud
+        visual                      = dynamics\weapons\wpn_m24\wpn_m24.ogf
+        position                    = -0.026, -0.077, 0.00
+        orientation                 = 0, 0, 0
+        fire_point                  = 0.0, 0.129, 0.942
+        fire_point2                 = 0.0, 0.129, 0.942
+        strap_bone0                 = bip01_spine2
+        strap_bone1                 = bip01_spine1
+        strap_position              = -0.15, -0.15, 0.45
+        strap_orientation           = -25, -189, 65
+        ph_mass                     = 3
+        
+        flame_particles             = weapons\generic_weapon06
+        smoke_particles             = amik\weapons\smoke_particles\smoke_particles_pump_01
+        
+		shell_point		 	        = 0.0, 0.129, 0.192
+		shell_dir		 	        = 0.0, 0.0, 0.4
+		shell_particles	 		    = ;weapons\generic_shells
+
+        light_disabled              = false
+        light_color                 = 0.6, 0.5, 0.3
+        light_range                 = 4.0
+        light_time                  = 0.2
+        light_var_color             = 0.05
+        light_var_range             = 0.5
+        
+        upgrades                    = up_gr_firstab_m24, up_gr_seconab_m24, up_gr_thirdab_m24, up_gr_fourtab_m24, up_gr_fourtcd_m24, up_gr_fourtef_m24
+        installed_upgrades          =
+        upgrade_scheme              = upgrade_scheme_svd
+        upgr_icon_x                 = 750
+        upgr_icon_y                 = 1850
+        upgr_icon_width             = 150
+        upgr_icon_height            = 100
+        
+        fire_modes                  = 1
+        ammo_class                  = ammo_magnum_300, ammo_magnum_300_bad, ammo_magnum_300_verybad
+        ammo_elapsed                = 10
+        ammo_mag_size               = 10
+        startup_ammo                = 10
+        
+        scope_status                = 1
+		scope_dynamic_zoom          = on
+        scope_name                  = wpn_addon_scope
+        scope_x                     = 60
+        scope_y                     = -2
+        scope_zoom_factor                = 6	
+		min_scope_zoom_factor			 = 30
+        
+		silencer_name               = wpn_sil_timberwolf
+		silencer_status             = 0
+		silencer_x                  = 271
+		silencer_y                  = 24
+        silencer_light_color        = 0.6, 0.5, 0.3
+        silencer_light_range        = 0.01
+        silencer_light_time         = 0.2
+        silencer_light_var_color    = 0.05
+        silencer_light_var_range    = 0.5
+        silencer_smoke_particles    = weapons\generic_shoot_00
+        
+        grenade_launcher_status     = 0
+        launch_speed                = 0
+        
+        hit_impulse                 = 45
+        hit_power                   = 1, 1, 1, 1
+        hit_type                    = fire_wound
+        fire_distance               = 1500
+        bullet_speed                = 845
+        rpm                         = 35
+        rpm_empty_click             = 200
+        
+        use_aim_bullet              = false
+        time_to_aim                 = 0.0 ;  1.0
+        zoom_enabled                = true
+        zoom_rotate_time            = 0.25
+        reload_dof                  = 0.0, 0.5, 5, 2.2
+control_inertion_factor = 1.0f
+        crosshair_inertion          = 9.8
+        fire_dispersion_base        = 0.054
+        fire_dispersion_condition_factor = 0.001
+        
+        misfire_probability         = 0.005
+        misfire_start_condition     = 0.7 ;  0.7
+        misfire_start_prob          = 0.005
+        misfire_end_condition       = 0.15
+        misfire_end_prob            = 0.1
+        
+        condition_queue_shot_dec    = 0.005
+        condition_shot_dec          = 0.005
+        
+        cam_return                  = 0
+        cam_relax_speed             = 4.5
+        cam_dispersion              = 3.14
+        cam_dispersion_frac         = 1.0
+        cam_dispersion_inc          = 3.14
+        cam_max_angle               = 50.0
+        cam_max_angle_horz          = 50.0
+        cam_step_angle_horz         = 0.86
+        zoom_cam_relax_speed        = 0.75
+        zoom_cam_dispersion         = 1.00
+        zoom_cam_dispersion_frac    = 1.0
+        zoom_cam_dispersion_inc     = 2.53
+        zoom_cam_max_angle          = 50.0
+        zoom_cam_max_angle_horz     = 50.0
+        zoom_cam_step_angle_horz    = 0.68
+        
+        PDM_disp_accel_factor       = 3.05
+        PDM_disp_base               = 1.65
+        PDM_disp_crouch             = 1.0
+        PDM_disp_crouch_no_acc      = 1.0
+        PDM_disp_vel_factor         = 3.05
+        
+        cam_relax_speed_ai          = 360
+        zoom_cam_relax_speed_ai     = 120.75
+        holder_fov_modifier         = 1.0
+        holder_range_modifier       = 2.15
+        min_radius                  = 0
+        max_radius                  = 500
+        hit_probability_gd_novice   = 1.00
+        hit_probability_gd_stalker  = 1.00
+        hit_probability_gd_veteran  = 1.00
+        hit_probability_gd_master   = 1.00
+        
+        kill_msg_x                  = 0
+        kill_msg_y                  = 0
+        kill_msg_width              = 98
+        kill_msg_height             = 23
+
+	s3ds_reticle_size 	= 4.35
+	s3ds_eye_relief 	= 4
+	s3ds_exit_pupil		= 0.4	
+	s3ds_ffp			= 1	
+	s3ds_min_zoom_fov 	= 12
+	s3ds_max_zoom_fov 	= 28
+	magnification 		 = 20
+		
+lewd_lens_hide_enabled       = true
+lewd_lens_hide_bone          = lens
+lewd_lens_hide_delays        = 0.1,0
+lewd_lens_hide_aim_mode      = true, false, false	
+[wpn_m24_hud]:hud_base
+        item_visual                 = anomaly_weapons\wpn_m24\wpn_m24_hud.ogf
+        attach_place_idx            = 0
+        zoom_hide_crosshair         = true
+        
+        item_position               = 0.0, 0.0, 0.0
+        item_orientation            = 0.0, 0.0, 0.0
+        
+        hands_orientation                = 0.0018, 0.007207, 0.008
+        hands_orientation_16x9           = 0.0018, 0.007207, 0.008
+        hands_position                   = 0.000106, 0.000284, -0.000568
+        hands_position_16x9              = 0.000106, 0.000284, -0.000568
+        
+        aim_hud_offset_pos               = -0.121756, 0.028013, -0.122042
+        aim_hud_offset_pos_16x9          = -0.121756, 0.028013, -0.122042
+        aim_hud_offset_rot               = 0.004615, -0.003606, -0.000213
+        aim_hud_offset_rot_16x9          = 0.004615, -0.003606, -0.000213
+		
+		lowered_hud_offset_pos           = 0.120449, -0.007241, -0.006116
+        lowered_hud_offset_pos_16x9      = 0.120449, -0.007241, -0.006116
+        lowered_hud_offset_rot           = 0.103273, -0.802666, 0.096376
+        lowered_hud_offset_rot_16x9      = 0.103273, -0.802666, 0.096376
+
+        lean_hud_offset_pos         = 0, 0, 0
+        lean_hud_offset_rot         = 0, 0, 0
+        
+        anm_hide                    = m24_hand_holster, m24_idle
+        anm_idle                    = m24_hand_idle, m24_idle
+        anm_idle_aim                = m24_hand_idle_aim, m24_idle
+        anm_idle_aim_moving         = m24_hand_moving, m24_idle, 0.75
+        anm_idle_aim_moving_crouch  = m24_hand_moving, m24_idle, 0.7
+        anm_idle_moving             = m24_hand_moving, m24_idle
+        anm_idle_sprint             = m24_hand_sprint, m24_idle
+		anm_reload		            = m24_hand_reload, m24_reload
+		anm_reload_empty		    = m24_hand_reload_empty, m24_reload_empty
+		anm_reload_misfire          = m24_hand_unjam, m24_unjam
+        anm_shots                   = m24_hand_shoot, m24_shoot
+		anm_shots_variant1			= m24_hand_shoot1, m24_shoot
+        anm_show                    = m24_hand_draw, m24_idle
+        
+        shell_bone                  = gilza
+        shell_dir                   = 0.0, 1.0, 0.0
+        shell_point                 = 0, 0, 0
+        
+        fire_bone                   = muzzle
+        fire_point                  = 0, 0, 0
+ 
+		freelook_z_offset_mul		= 0.45

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+	<string id="st_wpn_m24_new">
+		<text>M24 SWS</text>
+	</string>
+	<string id="st_wpn_m24_new_short">
+		<text>M24 SWS</text>
+	</string>
+	<string id="st_wpn_m24_new_descr">
+		<text>Снайперская винтовка армии США M24 SWS (Sniper Weapon System - Система Снайперского Вооружения) создана на основе Remington 700 и технически представляет собой магазинную винтовку с продольно-скользящим поворотным затвором. На ней установлен оптический прицел Leupold Ultra M3A 10x40, ствол из специально обработанной нержавеющей стали и регулируемый под стрелка композитный приклад.\n \n
+		%c[ui_gray_2]ATTACHMENTS: \n
+		%c[d_purple] • %c[ui_gray_2] глушитель НАТО\n
+		%c[d_purple] • %c[ui_gray_2] Прицел Leupold Mark 4 (интегрированный)\n \n</text>
+	</string>
+</string_table>
